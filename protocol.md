@@ -55,7 +55,7 @@ _`quoteLiquidity(uint256 amountA, uint256 reserveA, uint256 reserveB) returns (u
 
 _`quoteAddLiquidity(address tokenA, address tokenB, bool stable, address factory, uint256 amountADesired, uint256 amountBDesired) returns (uint256 amountA, uint256 amountB, uint256 liquidity)`_
 
-**Description:** Given two assets, the respective amounts the caller wishes to deposit, and the pool factory, returns the ideal amounts to be deposited, and the amount of liquidity that would be minted
+**Description:** Given two assets, the respective amounts the caller wishes to deposit, and the pool factory, returns the ideal amounts to be deposited, and the amount of liquidity that would be minted.
 
 **Parameters:**
 
@@ -68,6 +68,21 @@ _`quoteAddLiquidity(address tokenA, address tokenB, bool stable, address factory
 
 **Returns:**
 
-- amountA - Ideal amount of tokenA to deposit.
-- amountB - Ideal amount of tokenB to deposit.
+- amountA - Ideal amount of `tokenA` to deposit.
+- amountB - Ideal amount of `tokenB` to deposit.
 - liquidity - The liquidity that would be minted.
+
+_`removeLiquidity(address tokenA, address tokenB, bool stable, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline)`_
+
+**Description:** Removes liquidity from an existing pool.
+
+**Parameters:**
+
+- tokenA - Address of first token.
+- tokenB - Address of second token.
+- stable - If this is a stable or volatile pair. If `true`, the pair is a stable pair.
+- liquidity - How much liquidity to remove.
+- amountAMin - The least amount of `tokenA` to get back.
+- amountBMin - The least amount of `tokenB` to get back.
+- to - Address to burn liquidity from.
+- deadline - Time (in seconds) after which the transaction would be considered invalid.
