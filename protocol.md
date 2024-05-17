@@ -9,6 +9,7 @@ The protocol smart contracts are relevant to Liquidity & Governance
 
 #### Functions:
 
-*`addLiquidityETH(address token, bool stable, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin)`*
+*`addLiquidityETH(address token, bool stable, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin)`* - Add to existing or create new liquidity.
 
   - token - Address of token to pair against ETH
+  - stable - If this is a stable or v
