@@ -131,3 +131,21 @@ _`quoteRemoveLiquidity(address tokenA, address tokenB, bool stable, address fact
 
 - amountA - Amount of `tokenA` that would be removed from the pool.
 - amountB - Amount of `tokenB` that would be removed from the pool.
+
+## AggregatorRouter
+
+### Contract Addresses:
+
+_Bsc Testnet - [0xA2Af4FAe0d22608E3d34698F03ba4c4f75201a73](https://testnet.bscscan.com/address/0xA2Af4FAe0d22608E3d34698F03ba4c4f75201a73)_
+
+### Functions:
+
+_`swap(Trade calldata trade, address to, uint256 fee) payable`_
+
+**Description:** Performs a swap given a trade configuration, an address, and a fee.
+
+**Parameters:**
+
+- trade - The trade configuration. See structure [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
+- to - Address of the trade recipient.
+- fee - Fee to charge for the transaction. Must be greater than 0. At least 1% of the traded token is recommended.
