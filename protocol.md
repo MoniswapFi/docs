@@ -165,3 +165,17 @@ _`findBestPath(uint256 _amountIn, address _tokenIn, address _tokenOut, uint256 _
 **Returns:**
 
 - offer - The `FormattedOffer` configuration useful for composing the trade object. Structure can be found [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
+
+_`query(address tokenIn, address tokenOut, uint256 amountIn) returns (Query memory _bestQuery)`_
+
+**Description:** Returns the best query, useful in predicting the outcomes of a swap.
+
+**Parameters:**
+
+- tokenIn - Address of the first token.
+- tokenOut - Address of the second token.
+- amountIn - Amount of `tokenIn` to send.
+
+**Returns:**
+
+- \_bestQuery - A `Query` item useful for predicting the potential outcomes of a swap. Structure can be found [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
