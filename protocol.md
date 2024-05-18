@@ -84,5 +84,33 @@ _`removeLiquidity(address tokenA, address tokenB, bool stable, uint256 liquidity
 - liquidity - How much liquidity to remove.
 - amountAMin - The least amount of `tokenA` to get back.
 - amountBMin - The least amount of `tokenB` to get back.
-- to - Address to burn liquidity from.
+- to - Address to send tokens to.
+- deadline - Time (in seconds) after which the transaction would be considered invalid.
+
+_`removeLiquidityETH(address token, bool stable, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline)`_
+
+**Description:** Removes liquidity from `ETH`, and `token` pair.
+
+**Parameters:**
+
+- token - Address of token paired against `ETH`.
+- stable - If this is a stable or volatile pair. If `true`, the pair is a stable pair.
+- liquidity - The amount of liquidity that the caller desires to remove for `token`, and `ETH` pair.
+- amountTokenMin - The least amount of `token` that should be sent back to caller.
+- amountETHMin - The least amount of `ETH` that should be sent back to caller.
+- to - The address to send tokens to.
+- deadline - Time (in seconds) after which the transaction would be considered invalid.
+
+_`removeLiquidityETHSupportingFeeOnTransferTokens(address token, bool stable, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline)`_
+
+**Description:** Removes liquidity from `ETH`, and `token` pair. Covers tokens with transfer fees.
+
+**Parameters:**
+
+- token - Address of token paired against `ETH`.
+- stable - If this is a stable or volatile pair. If `true`, the pair is a stable pair.
+- liquidity - The amount of liquidity that the caller desires to remove for `token`, and `ETH` pair.
+- amountTokenMin - The least amount of `token` that should be sent back to caller.
+- amountETHMin - The least amount of `ETH` that should be sent back to caller.
+- to - The address to send tokens to.
 - deadline - Time (in seconds) after which the transaction would be considered invalid.
