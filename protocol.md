@@ -150,3 +150,18 @@ _`swap(Trade calldata trade, address to, uint256 fee) payable`_
 - to - Address of the trade recipient.
 - fee - Fee to charge for the transaction. Must be greater than 0. At least 1% of the traded token is recommended.
 - msg.value - `ETH` amount if this is an `ETH` trade.
+
+_`findBestPath(uint256 _amountIn, address _tokenIn, address _tokenOut, uint256 _maxSteps) returns (FormattedOffer memory offer)`_
+
+**Description:** Finds the best trade path between two tokens.
+
+**Parameters:**
+
+- \_amountIn - The amount to swap from.
+- \_tokenIn - The token to swap from.
+- \_tokenOut - The token to swap to.
+- \_maxSteps - The maximum steps (or pathways) to take from `_tokenIn` to `_tokenOut`. Must be greater than 0, and less than 5.
+
+**Returns:**
+
+- offer - The `FormattedOffer` configuration useful for composing the trade object. Structure can be found [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
