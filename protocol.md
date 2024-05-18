@@ -149,3 +149,4 @@ _`swap(Trade calldata trade, address to, uint256 fee) payable`_
 - trade - The trade configuration. See structure [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
 - to - Address of the trade recipient.
 - fee - Fee to charge for the transaction. Must be greater than 0. At least 1% of the traded token is recommended.
+- msg.value - `ETH` amount if this is an `ETH` trade.
