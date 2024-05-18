@@ -114,3 +114,20 @@ _`removeLiquidityETHSupportingFeeOnTransferTokens(address token, bool stable, ui
 - amountETHMin - The least amount of `ETH` that should be sent back to caller.
 - to - The address to send tokens to.
 - deadline - Time (in seconds) after which the transaction would be considered invalid.
+
+_`quoteRemoveLiquidity(address tokenA, address tokenB, bool stable, address factory, uint256 liquidity) returns (uint256 amountA, uint256 amountB)`_
+
+**Description:** Given two tokens, `tokenA`, & `tokenB`, a pool factory, and a liquidity amount, returns the amounts of tokens sent back to the caller.
+
+**Parameters:**
+
+- tokenA - Address of first token.
+- tokenB - Address of second token.
+- stable - If this is a stable or volatile pair. If `true`, the pair is a stable pair.
+- factory - Pool factory address.
+- liquidity - Amount of liquidity you intend to remove.
+
+**Returns:**
+
+- amountA - Amount of `tokenA` that would be removed from the pool.
+- amountB - Amount of `tokenB` that would be removed from the pool.
