@@ -4,7 +4,7 @@ The protocol smart contracts are relevant to Liquidity & Governance
 
 ### Contract Addresses:
 
-_Bsc Testnet - [0xc6b776fAD24f4ac2120ff35c88f3a0B83b9f5b29](https://testnet.bscscan.com/address/0xc6b776fAD24f4ac2120ff35c88f3a0B83b9f5b29)_
+_Bera Bartio - [0x19042106AABFA3A2cDf46Ea160aA6fa9Db31c261](https://bartio.beratrail.io/address/0x19042106AABFA3A2cDf46Ea160aA6fa9Db31c261)_
 
 ### Functions:
 
@@ -136,7 +136,7 @@ _`quoteRemoveLiquidity(address tokenA, address tokenB, bool stable, address fact
 
 ### Contract Addresses:
 
-_Bsc Testnet - [0xA2Af4FAe0d22608E3d34698F03ba4c4f75201a73](https://testnet.bscscan.com/address/0xA2Af4FAe0d22608E3d34698F03ba4c4f75201a73)_
+_Bera Bartio - [0xbcC7Eee299c89CBD285A996d461499c7a9af753A](https://bartio.beratrail.io/address/0xbcC7Eee299c89CBD285A996d461499c7a9af753A)_
 
 ### Functions:
 
@@ -146,7 +146,7 @@ _`swap(Trade calldata trade, address to, uint256 fee) payable`_
 
 **Parameters:**
 
-- trade - The trade configuration. See structure [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
+- trade - The trade configuration. See structure [here](https://github.com/MoniswapFi/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
 - to - Address of the trade recipient.
 - fee - Fee to charge for the transaction. Must be greater than 0. At least 1% of the traded token is recommended.
 - msg.value - `ETH` amount if this is an `ETH` trade.
@@ -164,7 +164,7 @@ _`findBestPath(uint256 _amountIn, address _tokenIn, address _tokenOut, uint256 _
 
 **Returns:**
 
-- offer - The `FormattedOffer` configuration useful for composing the trade object. Structure can be found [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
+- offer - The `FormattedOffer` configuration useful for composing the trade object. Structure can be found [here](https://github.com/MoniswapFi/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
 
 _`query(address tokenIn, address tokenOut, uint256 amountIn) returns (Query memory _bestQuery)`_
 
@@ -178,4 +178,4 @@ _`query(address tokenIn, address tokenOut, uint256 amountIn) returns (Query memo
 
 **Returns:**
 
-- \_bestQuery - A `Query` item useful for predicting the potential outcomes of a swap. Structure can be found [here](https://github.com/Moniswap/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
+- \_bestQuery - A `Query` item useful for predicting the potential outcomes of a swap. Structure can be found [here](https://github.com/MoniswapFi/contracts/blob/master/contracts/exchange-aggregator/interfaces/IAggregatorRouter.sol)
